@@ -10,7 +10,7 @@ Base = declarative_base()
 class Database:
 
     async def get_db():
-        url = "postgresql+psycopg2://aaditya:Praemineo123@localhost:5432/inventory_management"
+        url = "postgresql+psycopg2://aaditya:{password}@localhost:5432/inventory_management"
         engine = create_engine(url)
         Base.metadata.create_all(engine)
         print("tables created successfully!")
